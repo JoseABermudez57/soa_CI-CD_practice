@@ -1,19 +1,18 @@
 # Use base
 FROM node:20
 
-# Set the working directory
-WORKDIR /app
+# Copy the files of your project to the container
+COPY . /app
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+# Stable the working directory
+WORKDIR /app
 
 # Install the project dependencies
 RUN npm install
 
-# Copy the rest of the project files
 COPY . .
 
-# Expose the port on which your application runs
+# Expose the port in which your application runs
 EXPOSE 3000
 
 # Define the command to start your application
