@@ -10,6 +10,8 @@ WORKDIR /app
 # Install the project dependencies
 RUN npm install
 
+COPY . .
+
 # Expose the port in which your application runs
 EXPOSE 3000
 
