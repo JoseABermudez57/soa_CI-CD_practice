@@ -7,7 +7,7 @@ app.get('/api/v1/welcome', (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log('API corriendo en el puerto 3000');
+    console.log('La API corriendo en el puerto 3000');
 });
 
 module.exports = app

@@ -42,7 +42,6 @@ pipeline {
                         if (contenerdorId != "") {
                             sh "docker stop soa-deploy-test"
                             sh "docker rm soa-deploy-test"
-                            // sh "docker rmi ${imageId}"
                             sh "docker rmi soa-deploy:latest"
                         } else {
                             sh "docker rmi soa-deploy:latest"
@@ -80,5 +79,6 @@ post {
         failure {
             echo 'Build failed. No deployment will be done.'
         }
+    }
     }
 }
