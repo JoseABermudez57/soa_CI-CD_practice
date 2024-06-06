@@ -4,12 +4,18 @@
   "description": "José Alfredo 213366",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test":  "mocha src/tests --recursive --exit",
     "start": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mocha": "^10.4.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "mocha": "^10.4.0",
+    "supertest": "^7.0.0"
   }
 }
