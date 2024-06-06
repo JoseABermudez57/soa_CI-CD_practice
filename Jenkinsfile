@@ -63,7 +63,9 @@ pipeline {
                 }
             }
         }
+    }
 }
+
 
 post {
         success {
@@ -79,6 +81,5 @@ post {
         failure {
             echo 'Build failed. No deployment will be done.'
         }
-    }
     }
 }
