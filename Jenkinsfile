@@ -79,7 +79,7 @@ post {
             }
         }
         failure {
-            echo 'Build failed. No deployment will be done.'
+            error 'Build failed. No deployment will be done.'
         }
     }
 }
