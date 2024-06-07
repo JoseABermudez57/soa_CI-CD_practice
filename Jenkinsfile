@@ -58,7 +58,7 @@ pipeline {
             }
         }
         failure {
-            error 'Build failed. No deployment will be done.'
+            echo 'Build failed. No deployment will be done.'
         }
     }
 }
