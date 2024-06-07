@@ -1,19 +1,20 @@
-# Use base
+# Usa una imagen base oficial de Node.js
 FROM node:20
 
-# Copy the files of your project to the container
-COPY . /app
-
-# Stable the working directory
+# Establece el directorio de trabajo en /app
 WORKDIR /app
 
-# Install the project dependencies
+# Copia el archivo package.json y package-lock.json (si existe)
+COPY package*.json ./
+
+# Instala las dependencias del proyecto
 RUN npm install
 
+# Copia el resto de los archivos del proyecto
 COPY . .
 
-# Expose the port in which your application runs
+# Expone el puerto en el que la aplicación correrá
 EXPOSE 3000
 
-# Define the command to start your application
+# Define el comando por defecto para iniciar la aplicación
 CMD ["npm", "start"]
